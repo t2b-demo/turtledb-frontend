@@ -1,0 +1,22 @@
+{
+  "name": "turtledb-frontend",
+  "version": "1.0.0",
+  "description": "React Frontend of the turtleDB POC",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t2b-demo/turtledb-frontend.git"
+  },
+  "keywords": [],
+  "author": "Bernard Adanlessossi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t2b-demo/turtledb-frontend/issues"
+  },
+  "homepage": "https://github.com/t2b-demo/turtledb-frontend#readme"
+}
