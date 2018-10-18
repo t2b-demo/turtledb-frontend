@@ -4,6 +4,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 // Components
 import TableComponent from './TableComponent/TableComponent';
+import TreeComponent from './TreeComponent/TreeComponent';
 import ControlPanel from './ControlPanel/ControlPanel';
 
 import TurtleDB from 'turtledb';
@@ -13,7 +14,7 @@ const turtleDB = new TurtleDB(dbName);
 turtleDB.setRemote('http://localhost:3000');
 window.turtleDB = turtleDB;
 
-class Home extends React.Component {
+class Home extends React.Component { 
     constructor() {
         super()
         this.state = {
@@ -214,6 +215,14 @@ class Home extends React.Component {
                     autoSync={this.state.autoSync}
                     handleCompactClick={this.handleCompactClick}
                   />
+              </Col>
+              <Col>
+              <TreeComponent
+                  selectedTreeMetaDoc={this.state.selectedTreeMetaDoc}
+                  selectedTreeDoc={this.state.selectedTreeDoc}
+                  handleTreeDocClick={this.handleTreeDocClick}
+                  handlePickWinnerClick={this.handlePickWinnerClick}
+                />
               </Col>
             </Row>
             <Row className="show-grid" style={{marginTop: 40}}>
